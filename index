@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a mis practicas de laboratorio</h1>
+        <p>David Alejandro Robles Camacho A01277315</p>
+    </header>
+    <main>
+        <section>
+            <h2>Respositorio</h2>
+            <p>Puedes ver la practica e laboratorio 1 aqui:</p>
+            <a href="https://dvd8ddd.github.io/Construccion-de-software-y-Toma-de-decisiones-David-Robles/" target="_blank"></a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Creado por davidmatafurros</p>
+    </footer>
+</body>
+</html>
+
+ 
