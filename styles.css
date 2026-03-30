@@ -1,0 +1,111 @@
+/* Reset */  /* comando para poner comentarios- comentario de David*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+/*Base*/
+body {
+    font-family: Arial, sans-serif;     /* cambiar tipo de letra*/
+    font-size:1rem;         /* cambiar tamaño de letra*/
+}
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;                    /* cambiar tamaño de letra*/
+    background-color: #333;
+}
+.navbar h2 {
+    color: white;
+}
+#logo img {
+    height: 50px;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+.navbar a {
+    color: rgb(234, 20, 20);
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #24dbf4; 
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #3b003b, #8b004f, #ff0055);/* para mezclar dos colores, los colores son del album Indigo de Chris Brown */
+}
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    margin-bottom: 1rem;
+}
+.btn {
+    padding: 0.5rem 1rem;
+    border: 1.2px solid rgb(224, 222, 222); */para cambiar las palabras de la esquina*/
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+.features {
+    padding: 2rem;
+    text-align: center;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+.card p{
+    font-size: 0.9rem;
+}
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: rgb(255, 255, 255);
+}
+#reflexion {            /* para poner espacios entre las preguntas, el # selecciona*/
+    padding: 2rem;
+}
+#reflexion p {
+    margin-bottom: 1rem;
+}
+#reflexion strong {
+    display: block;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        width: 30%;
+    }   
+}
+@media (min-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
