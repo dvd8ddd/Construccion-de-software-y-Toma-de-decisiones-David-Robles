@@ -52,7 +52,7 @@ body {
 }
 .btn {
     padding: 0.5rem 1rem;
-    border: 1.2px solid rgb(224, 222, 222); */para cambiar las palabras de la esquina*/
+    border: 1.2px solid rgb(224, 222, 222); /*para cambiar las palabras de la esquina*/
     text-decoration: none;
 }
 .btn:hover {
