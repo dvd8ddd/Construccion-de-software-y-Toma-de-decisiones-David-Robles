@@ -1,0 +1,108 @@
+<!-- DevCard — página de perfil de desarrollador -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>DevCard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <span class="navbar__logo">DevCard</span>
+    <ul class="navbar__links">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+
+    <!--Poner en el boton de modo oscuro-->
+    <button id="toggle-dark" class="btn btn--sm">🌙 Modo oscuro</button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img class="hero__avatar"
+         src="https://api.dicebear.com/7.x/avataaars/svg?seed=devcard"
+         alt="Avatar">
+    <h1 class="hero__name">Ada Lovelace</h1>
+    <p class="hero__role">Full-Stack Developer</p>
+    <a href="#" class="btn">Ver proyectos</a>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <h2>Mis habilidades</h2>
+    <div class="skills__grid">
+      <div class="skill-card">
+        <span class="skill-card__icon">🌐</span>
+        <h3>HTML & CSS</h3>
+        <p>Semántica, Flexbox, Grid y diseño responsivo.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__icon">⚙️</span>
+        <h3>JavaScript</h3>
+        <p>ES6+, DOM, Fetch API y programación asíncrona.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__icon">🗄️</span>
+        <h3>Node.js</h3>
+        <p>APIs REST, Express y manejo de bases de datos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>✉️ ada@devcard.io — GitHub: @ada</p>
+  </footer>
+
+  <!--Poner en modo oscuro la pantalla-->
+<script>
+  const btn = document.getElementById('toggle-dark');
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    btn.textContent = document.body.classList.contains('dark')
+      ? '☀️ Modo claro' : '🌙 Modo oscuro';
+  });
+</script>
+
+<!-- Seccion de reflexion -->
+<section id="reflexion">
+    <h2>Preguntas</h2>
+    <p><strong>¿Qué ventajas ofrecen las variables CSS sobre los valores hardcodeados?</strong></p>
+    <p>Permite reutilizar valores y facilitar cambios globales en el diseño</p>
+    <p><strong>¿En qué casos conviene declarar variables CSS fuera del selector :root?</strong></p>
+    <p>Cuando se desea limitar su uso a un componenet o seccion específica</p>
+    <p><strong>¿Cómo se pueden utilizar las variables CSS para implementar un sistema de temas (como modo oscuro)?</strong></p>
+    <p>Cambiando los valores de las variables segun una clase</p>
+    <p><strong>¿Qué sucede cuando intentas usar una variable CSS que no ha sido declarada?</strong></p>
+    <p>La propiedad no se aplica o usa un valor por defecto si existen</p>
+    <p><strong>¿Cuál es la diferencia entre los enfoques mobile-first y desktop-first?</strong></p>
+    <p>Mobile-first inicia en pantallas pequeñas, desktop-first inicia en pantallas grandes (de escritorio o de pc)</p>
+    <p><strong>¿Qué breakpoints son los más comunes y por qué?</strong></p>
+    <p>320 px, 768 px, 1024 px porque corresponden a dispositivos comunes</p>
+    <p><strong>¿Cómo afecta el viewport meta tag al diseño responsivo?</strong></p>
+    <p>Permite que el diseño se adapte correctamente al tamaño del dispositivo</p>
+    <p><strong>¿Qué técnicas además de media queries existen para crear diseños responsivos?</strong></p>
+    <p>Flexbox, Grid unidades relativas e imagenes fluidas</p>
+    <p><strong>¿Cómo puedes identificar qué regla CSS está siendo aplicada cuando hay múltiples selectores?</strong></p>
+    <p>Usando DevTools para ver que reglas se aplican o se sobreescriben</p>
+    <p><strong>¿Qué información proporciona la pestaña Computed en DevTools?</strong></p>
+    <p>Muestra los valores dfinales de las propiedades del lenguaje CSS</p>
+    <p><strong>¿Cómo puedes simular diferentes dispositivos sin tener acceso físico a ellos?</strong></p>
+    <p>Con el modo responsive de DevTools</p>
+    <p><strong>¿En qué situaciones es preferible usar Bootstrap sobre Tailwind CSS y viceversa?</strong></p>
+    <p>BOotstrap se usa para rapidez con los componentes, Tailwind para mayor personalización</p>
+    <p><strong>¿Qué significa que Tailwind sea "utility-first"?</strong></p>
+    <p>Uso de clases utilitarias directamente en el HTML</p>
+    <p><strong>¿Cómo afecta el uso de un framework CSS al tamaño final del bundle?</strong></p>
+    <p>Puede aumentar el tamaño si no se optimiza</p>
+    <p><strong>¿Es posible combinar múltiples frameworks CSS en un mismo proyecto? ¿Por qué sí o por qué no?</strong></p>
+    <p>Si, pero no es lo recomendable por que puede causar redundancia</p>
+</section>
+
+</body>
+</html>

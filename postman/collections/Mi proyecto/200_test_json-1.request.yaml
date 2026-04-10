@@ -1,0 +1,5 @@
+$kind: http-request
+name: 200_test_json
+url: "{{local}}{{port}}/test_json"
+method: POST
+order: 3952320040692338

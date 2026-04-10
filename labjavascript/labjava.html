@@ -1,0 +1,203 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML</title>
+  </head>
+  <body>
+     <p id="parrafo">Parrafo 1</p>
+     <p id="parrafo">Parrafo 2 </p>
+  </body>
+  <script>
+    // console.log(document);
+
+    /* Función getElementById */
+
+  </script>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML</title>
+  </head>
+  <body>
+     <p id="parrafo">Lorem ipsum dolor sit </p>
+     <p id="parrafo">Parráfo 2 </p>
+  </body>
+  <script>
+    let log = console.log;
+    // console.log(document);
+
+    /* Función getElementById */
+    let variablePar = document.getElementById("parrafo");
+    log(variablePar);
+
+    log("Bandera");
+    log("Bandera 2");
+    log("Bander el bueno...");
+  </script>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML</title>
+  </head>
+  <body>
+     <p id="par1">Lorem ipsum dolor sit </p>
+     <div id="par2">
+        <p>Parráfo 2 </p>
+     </div>
+     
+  </body>
+  <script>
+    let log = console.log;
+    // console.log(document);
+
+    /* Función getElementById */
+    let variablePar = document.getElementById("par2");
+    log(variablePar.innerHTML);
+  </script>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML</title>
+  </head>
+  <body>
+
+    <h1>Películas Famosas</h1>
+    <ul class="list">
+        <li>Titanic</li>
+        <li>Jurassic Park</li>
+        <li>El señor de los Anillos</li>
+        <li>Star Wars</li>
+    </ul>
+     
+  </body>
+  <script>
+    let log = console.log;
+    // console.log(document);
+
+    /* Función querySelector */
+    const h1Element = document.querySelector('h1');
+    log(h1Element);
+
+    const list = document.querySelectorAll("ul > li");
+    
+    list.forEach((item) => {
+        log(item.textContent);
+    });
+
+  </script>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML</title>
+  </head>
+  <body>
+
+    <h2>Elementos que se utilizan en desarrollo Web:</h2>
+
+    <!--Pregunta 1-->
+    <p><strong>Pregunta 1:</strong>¿Por que es una buena practica usar JavaScript para checar que sean validos los inputs de las formas antes de enviar los datos al servidor?</p>
+    <p>Respuesta: Porque JavaScript permite reaccionar a eventos en el documento y hacer la página dinámica, lo que ayuda a validar la informacion antes de enviarla y realizar acciones segun lo que haga el usuario</p>
+
+    <!--Pregunta 2-->
+    <p><strong>Pregunta 2:</strong>¿Como puedes saltarte la seguridad de validaciones hechas con JavaScript?</p>
+    <p>Respuesta: Porque se ejecutan del lado del cliente, por lo que pueden ser evitadas o modificadas antes de enviar los datos al servidor</p>
+
+    <!--Pregunta 3-->
+    <p><strong>Pregunta 3:</strong>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por que la primera pregunta dice que es una buena practica? </p>
+    <p>Respuesta: Porque mejoran la experiencia del usuario, pero la seguridad se hace en el servidor</p>
+  </body>
+  <script>
+    let log = console.log;
+    // console.log(document);
+
+    /* Función createElement */
+    let listaSinOrden = document.createElement("ul");
+
+    document.body.appendChild(listaSinOrden);
+
+    let elementoLista1 = document.createElement("li");
+    elementoLista1.textContent = "HTML";
+    let elementoLista2 = document.createElement("li");
+    elementoLista2.textContent = "CSS";
+    let elementoLista3 = document.createElement("li");
+    elementoLista3.textContent = "JavaScript";
+
+    listaSinOrden.appendChild(elementoLista1);
+    listaSinOrden.appendChild(elementoLista2);
+    listaSinOrden.appendChild(elementoLista3);
+
+    let newH3 = document.createElement("h3");
+    newH3.textContent = "Hola soy David Robles AO1277315";
+    document.body.appendChild(newH3);
+
+    const h3 = document.querySelector("h3");
+    h3.style.color = "#4B0082";
+
+  </script>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta charset="utf-8">
+    <title>HTML</title>
+  </head>
+  <body>
+    
+
+
+     
+  </body>
+  <script>
+    let log = console.log;
+    // console.log(document);
+
+    /* Eventos */
+    let newButton = document.createElement("button");
+    newButton.textContent = "Mostrar Alerta";
+    newButton.setAttribute("id", "btn");
+    document.body.appendChild(newButton);
+
+    const button = document.getElementById("btn");
+
+    button.addEventListener("click", function() {
+      // alert("¡Hola! Has hecho clic en el botón.");
+      //var result = confirm("Desea continuar?");
+      //log(result);
+
+      Swal.fire({
+        title: 'Error!',
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+        });
+    });
+
+  </script>
+</html>
+-->

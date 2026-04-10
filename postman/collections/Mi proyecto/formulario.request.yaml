@@ -1,0 +1,5 @@
+$kind: http-request
+name: formulario
+url: "{{local}}{{port}}/form_method"
+method: POST
+order: 4486698206352031
