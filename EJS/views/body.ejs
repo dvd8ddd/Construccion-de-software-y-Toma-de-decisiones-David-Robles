@@ -1,0 +1,24 @@
+<p>Before the script...</p>
+<p>...After the script.</p>
+
+<% 
+    console.log("Antes de iniciar");
+    let variable = "Hola soy una variable";
+    for(let i = 0; i < 100; i++) {
+ %>
+
+<%- include("footer.ejs") %>
+<p><%= variable + " " + i %></p>
+
+<% } %>
+
+<script>
+    console.log("Después de iniciar");
+</script>
+
+<script>
+    <% for(let j = 0; j < 100; j++) { %>
+        <% console.log("Del lado del servidor " + j); %>
+        console.log("Valor de j: " + <%= j %>);
+    <% } %>
+</script>
