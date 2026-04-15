@@ -22,13 +22,13 @@ const server = http.createServer((req, res) => {
             res.setHeader('Content-Type', 'text/html');    
             res.write(`
                 <!DOCTYPE html>
-                <html lang="en">
+                <html lang="es">
                 <head>
                     <meta charset="utf-8">
-                    <title>CÃ³digo en HTML</title>
+                    <title>Código en HTML</title>
                 </head>
                 <body>
-                <h1>hola mundo desde node</h1>
+                <h1>Hola mundo desde Node</h1>
                 </body>
                 </html>
             `);

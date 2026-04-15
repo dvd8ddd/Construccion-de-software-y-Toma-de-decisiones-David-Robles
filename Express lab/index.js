@@ -31,17 +31,20 @@ app.post('/test_json', (request, response, next) => {
     response.end();  
 });
 
-app.get('/test_html', (request, response, next) => {
+app.get('/test_html', (request, response) => {
     response.setHeader('Content-Type', 'text/html');    
     response.write(`
         <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta charset="utf-8">
             <title>Código en HTML</title>
         </head>
         <body>
-            <h1>hola mundo desde express</h1>
+            <h1>Describe el archivo package.json</h1>
+            <p>David Alejandro Robles Camacho A01277315</p>
+            <p>El archivo package.json es un archivo de configuración de un proyecto en Node.js. Se genera con el comando npm init y permite definir información básica del proyecto, como el nombre, la versión, la descripción y el archivo principal.</p>
+            <p>También incluye scripts que se pueden ejecutar con npm y la lista de dependencias necesarias, por ejemplo express y body-parser. Su función principal es organizar y administrar la estructura del proyecto para facilitar su ejecución e instalación.</p>
         </body>
         </html>
     `);
@@ -61,3 +64,5 @@ const server = http.createServer( (request, response) => {
     console.log(request.url);
 });
 app.listen(3000);
+
+
