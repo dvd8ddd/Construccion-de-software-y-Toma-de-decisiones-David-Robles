@@ -15,16 +15,24 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
     res.end();
 });
-app.get("/test_ejs", (req, res)=> {
-    let frases= [];
+
+app.get("/test_ejs", (req, res) => {
+    let frases = [];
 
     frases.push("Frase 1");
     frases.push("Frase 2");
     frases.push("Frase 3");
     frases.push("Frase 4");
     frases.push("Frase 5");
-    
-    res.render("index");
+
+    res.render("index", {
+        frases: frases
+    });
 });
+app.post("/responder", (req, res) => {
+    const respuestaUsuario = req.body.respuesta;
+    res.send("Tu respuesta fue: + respuestaUsuario");
+});
+
 
 app.listen(3000);

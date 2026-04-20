@@ -1,10 +1,21 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <%- include("css.ejs") %>
+    <meta charset="UTF-8">
+    <title>Pregunta</title>
 </head>
 <body>
-    <%- include("body.ejs") %>
+    <h1>Contesta la pregunta</h1>
+    <p><strong>David Alejandro Robles Camacho A01277315</strong></p>
+    <p><strong>¿Qué otros templating engines existen para node?</strong></p>
+    <p>Además EJS, en Node.js tambien existen otros templating engines como Pug, Handlebars, Mustache y Nunjucks. Sirven para generar páginas HTML dinámicas, aunque cada una tiene una sintaxis diferente</p>
+    <p>y algunas opciones pueden ser más simples o más complejas.</p>
+
+    <h2>Frases</h2>
+    <ul>
+        <% for (let i = 0; i < frases.length; i++) { %>
+            <li><%= frases[i] %></li>
+        <% } %>
+    </ul>
 </body>
-<%- include("scripts.ejs") %>
 </html>
