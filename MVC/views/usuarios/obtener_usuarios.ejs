@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usuarios</title>
+</head>
+<body>
+
+    <h1>Lista de usuarios</h1>
+
+    <ul>
+        <% for (let i = 0; i < usuarios.length; i++) { %>
+            <li>
+                <%= usuarios[i].id %> - 
+                <%= usuarios[i].nombre %> - 
+                <%= usuarios[i].activo %>
+            </li>
+        <% } %>
+    </ul>
+
+</body>
+</html>

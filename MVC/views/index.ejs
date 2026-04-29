@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta</title>
+</head>
+<body>
+    <h1>David Alejandro Robles Camacho A01277315</h1>
+    <h1>Preguntas:</h1>
+    <h1>1.¿Qué beneficios encuentras en el estilo MVC?</h1>
+    <p>MVC ayuda a organizar mejor el proyecto separando datos, lógica y vista. Esto hace que el código sea más claro, facil de mantener y evita repetir funciones cuando el proyecto crece.</p>
+    <h1>2. ¿Encuentras alguna desventaja en el estilo arquitectónico MVC?</h1>
+    <p>Si, una desventaja es que al inicio puede parecer más complicado porque se deben crear más carpetas y archivos. Para proyectos pequeños puede sentirse confuso o innecesario, aunque ayuda mucho en proyectos grandes </p>
+
+
+    <ul>
+        <% for (let i = 0; i < preguntas.length; i++) { %>
+            <li><%= preguntas[i] %></li>
+        <% } %>
+    </ul>
+</body>
+</html>
