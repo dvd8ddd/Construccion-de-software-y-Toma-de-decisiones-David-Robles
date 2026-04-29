@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Interacción con la base de datos</title>
+</head>
+<body>
+    <h1>Preguntas práctica base de datos</h1>
+    <h1>¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?</h1>
+    <p>Ayuda a mantener el proyecto ordenando, ya que queda separado de las rutas, controladores y vistas. Asi, si cambia una consulta o la base de datos, solo se modfica el modelo y no todo el proyecto. En resumen permite modificar el modelo mientras que el proyecto queda intacto</p>
+    <h1>¿Qué es SQL injection y cómo se puede prevenir?</h1>
+    <p>Es un ataque donde el usuario escribe un codigo SQL malicioso en un input para alterar una consulta. Se puede prevenir usando queries parametrizadas como: $1, $2, en un lugar de concretar texto directamente</p>
+    <h1>3¿Por qué en la práctica las credenciales de Supabase viven en un archivo .env y no directamente en database.js? Menciona al menos dos consecuencias concretas (no teóricas) de haberlas escrito en el código y haber hecho commit.</h1>
+    <p>Porque en env se guardan credenciales sensibles como una contraseña de Supabase sin subirlas a un repositorio. Si se escriben directo en database.js y se hace commit, alguien podria conectarse a la base de datos y leer, modificar o borrar información.</p>
+    <h1>¿Qué problema resuelve usar un pool de conexiones en lugar de abrir y cerrar una conexión nueva en cada request?</h1>
+    <p>Un pool evitar abrir y cerrar una conexion nueva en cada request. Esto mejora el rendimiento porque reutiliza conexiones ya abiertas y reduce la carga sobre la base de datos</p>
+    <h1>En la práctica usaste pool.query(sql, [valor1, valor2]) con placeholders $1, $2 en lugar de armar el query concatenando strings. Muestra un ejemplo corto de un query inseguro y su versión parametrizada, y explica en 2–3 líneas por qué el segundo bloquea una inyección como ' OR 1=1 --.</h1>
+    <p>Codigo inseguro: const sql = SELECT * FROM games WHERE title ILIKE '%' OR 1=1 --%'</p>
+    <p>const sql = `SELECT * FROM games WHERE title ILIKE $1`;</p>
+    <p>const { rows } = await pool.query(sql, [`%${titulo}%`]);</p>
+
+    <form>
+        <p>1. ¿Qué beneficios encuentras en el estilo MVC?</p>
+    </form>
+</body>
+</html>

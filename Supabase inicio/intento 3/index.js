@@ -46,6 +46,9 @@ app.get('/buscar', async (req, res) => {
     const { rows } = await pool.query(sql, [`%${titulo}%`]);
     res.json(rows);
 });
+app.get("/preguntas", (req, res) => {
+    res.render("index");
+});
 
 const gameRoutes = require('./routes/game.routes.js');
 app.use('/games', gameRoutes);

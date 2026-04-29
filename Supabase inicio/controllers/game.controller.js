@@ -1,4 +1,4 @@
-const model = require('../models/game.model.js');
+const model = require('../intento 3/models/game.model.js');
 
 module.exports.index = async (req, res) => {
     try {
