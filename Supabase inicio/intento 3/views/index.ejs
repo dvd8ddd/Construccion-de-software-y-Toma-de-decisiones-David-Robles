@@ -15,12 +15,9 @@
     <h1>¿Qué problema resuelve usar un pool de conexiones en lugar de abrir y cerrar una conexión nueva en cada request?</h1>
     <p>Un pool evitar abrir y cerrar una conexion nueva en cada request. Esto mejora el rendimiento porque reutiliza conexiones ya abiertas y reduce la carga sobre la base de datos</p>
     <h1>En la práctica usaste pool.query(sql, [valor1, valor2]) con placeholders $1, $2 en lugar de armar el query concatenando strings. Muestra un ejemplo corto de un query inseguro y su versión parametrizada, y explica en 2–3 líneas por qué el segundo bloquea una inyección como ' OR 1=1 --.</h1>
-    <p>Codigo inseguro: const sql = SELECT * FROM games WHERE title ILIKE '%' OR 1=1 --%'</p>
-    <p>const sql = `SELECT * FROM games WHERE title ILIKE $1`;</p>
-    <p>const { rows } = await pool.query(sql, [`%${titulo}%`]);</p>
+    <p>Código inseguro: const sql = SELECT * FROM games WHERE title ILIKE '%' OR 1=1 --%'</p>
+    <p>Código seguro: const sql = `SELECT * FROM games WHERE title ILIKE $1`;</p>
+    <p>Código seguro: const { rows } = await pool.query(sql, [`%${titulo}%`]);</p>
 
-    <form>
-        <p>1. ¿Qué beneficios encuentras en el estilo MVC?</p>
-    </form>
 </body>
 </html>
