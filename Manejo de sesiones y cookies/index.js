@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const session = require("express-session");
 const cors = require('cors');
 const { doubleCsrf } = require('csrf-csrf');
+const helmet = require('helmet');
 
 const {
     generateCsrfToken,
@@ -27,11 +28,22 @@ app.use(cors({
         "https://miapp.com", 
         "https://www.miapp.com",
         "http://localhost:3000",
-        "http://google.fonts.com",
+        "https://fonts.googleapis.com",
         "http://cdn.jsdelivr.net",
         "https://cdn.jsdelivr.net"
     ], // Reemplaza con tus dominios permitidos
     credentials: true
+}));
+
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            "script-src":  ["'self'", "https://cdn.jsdelivr.net"],
+            "style-src":   ["'self'", "https://fonts.googleapis.com", "'unsafe-inline'"],
+            "font-src":    ["'self'", "https://fonts.gstatic.com"],
+            "img-src":     ["'self'", "data:", "https:"]
+        }
+    }   
 }));
 
 app.set('view engine', 'ejs');
@@ -102,9 +114,12 @@ app.get("/logout", (req, res) => {
     });
 });
 
-app.get("/buscar", (req, res) => {
-    const q = req.query.q || "";
-    res.send("<h1>Resultados de búsqueda para: " + q + "</h1>");
+app.get('/buscar', (request, response) => {
+    response.render('buscar', { q: request.query.q || '' });
+});
+
+app.get('/preguntas', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'pagina.html'));
 });
 
 app.listen(3000, () => {

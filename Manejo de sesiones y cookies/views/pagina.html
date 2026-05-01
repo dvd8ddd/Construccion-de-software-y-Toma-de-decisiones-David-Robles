@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Búsqueda</title>
+</head>
+<body>
+    <h1>David Alejandro Robles Camacho A01277315</h1>
+    <h1>Búsqueda</h1>
+    
+    <p>El Cross-Site Scripting es uno de los ataques más comunes dentro del OWASP top 10. Consiste en la inyección de código JavaScript malicioso dentro de una página Web, el cual es ejecutado en el navegador</p>
+    <p>de otros usuarios. Esto ocurre cuando una aplicación no válida correctamente los datos que recibe del usuario.</p>
+
+    <h1>Existen tres tipos principales</h1>
+    <p>Reflejado: el script viene en la URL y se ejecuta al cargar la página</p>
+    <p>Persistente: El script se guarda en la base de datos y afecta a todos los usuarios</p>
+    <p>DOM-based: Ocurre directamente en el navegador mediante manipulacion del DOM</p>
+
+    <p>El riesgo principal es que el atacante puede robar cookies de sesión, suplantar identidad o realizar acciones en nombre del usuario</p>
+
+    <h1>Formas de prevenir</h1>
+    <p>Escapar siempre la salida de datos, usar (<%= %>) en EJS en lugar de (<%- %>)</p>
+    <p>Validar entradas del usuario</p>
+    <p>Usar cookies con HttpOnly</p>
+    <p>Implementar políticas de seguridad como Content Security Policy con Helmet</p>
+    <p>Evitar insertar HTML dinámica sin control</p>
+
+    <h1>Dependencias de CORS en el proyecto</h1>
+    <p>Frontend del sistema, seria el dominio donde los usuarios entran al sistema</p>
+    <p>Backend, es en donde estarian las rutas de clientes, contratos, operaciones alertas y reportes</p>
+    <p>Ambiente local, seria el lugar para hacer las pruebas en la computadora</p>
+    <p>Servicio de verificación de documentos; el sistema debe verificar documentos del cliente</p>
+    <p>Servicio de listas/personas bloqueadas; el sistema debe validar clientes contra listas de personas bloquedas</p>
+    <p>Servicio de generación de reportes; es importante ya que el sistema debe generar reportes de forma segura</p>
+    <p>Librerias o estilos</p>
+
+
+    <form action="/pagina" method="GET">
+        <input type="text" name="q" placeholder="Buscar..." required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <br>
+
+    <a href="/">Volver al inicio</a>
+
+</body>
+</html>
