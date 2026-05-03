@@ -82,6 +82,10 @@ app.get('/test_db', async (request, response, next) => {
     }
 });
 
+app.get('/preguntas', (req, res) => {
+    res.render('preguntas');
+});
+
 const notasRoutes = require('./routes/notas.routes.js');
 app.use('/notas', notasRoutes);
 
