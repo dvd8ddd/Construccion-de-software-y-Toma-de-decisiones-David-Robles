@@ -1,3 +1,4 @@
+require('dotenv').config();
 const http = require('http');
 const express = require('express');
 const path = require('path');
@@ -28,6 +29,18 @@ app.get('/', (request, response, next) => {
 
 app.get("/test_ejs", (request, response, next) => {
     response.render("usuarios/login");
+});
+//Aqui inicia la modificacion
+const pool = require('./util/database');
+
+app.get('/test_db', async (request, response, next) => {
+    try {
+        const { rows } = await pool.query("SELECT * FROM users");
+        response.json(rows);
+    } catch (e) {
+        console.log(e);
+        response.status(500).send("Error en la base de datos");
+    }
 });
 
 const rutasUsuarios = require('./routes/usuarios.routes');
